@@ -171,6 +171,7 @@ module XmlSitemap
         item_string << "    <lastmod>#{item.lastmod_value}</lastmod>\n"
         item_string << "    <changefreq>#{item.changefreq}</changefreq>\n" if item.changefreq
         item_string << "    <priority>#{item.priority}</priority>\n" if item.priority
+        item_string << "    <xhtml:link #{item.alternate} />\n" if item.alternate
         item_string << "  </url>\n"
 
         item_results << item_string
